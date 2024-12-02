@@ -9,6 +9,8 @@ fake = Faker()
 
 # URL where the data is to be posted
 URL = "https://lerih3.cc/api/user/register"
+I = 0
+
 
 def phone_number():
     # Generate a random phone number starting with 98
@@ -66,14 +68,20 @@ def post_request(encoded_data):
         response = requests.post(URL, headers=headers, data=payload)
         response=json.loads(response.text)
         print(f"Response Code : {response['code']},Response Message : {response['msg']}")
+        if response['code'] == 1:
+            I=+1
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")
 
 
 def main():
     generate_data()
-    main()
+
 
 
 if __name__ == "__main__":
-    main()
+    # loop infite
+    while True:
+        main()
+        print(f"Account Count : {i}")
+
