@@ -9,8 +9,7 @@ fake = Faker()
 
 # URL where the data is to be posted
 URL = "https://lerih3.cc/api/user/register"
-I = 0
-
+I = 0  # Global variable to keep track of successful account creations
 
 def phone_number():
     # Generate a random phone number starting with 98
@@ -28,7 +27,6 @@ def generate_data():
         "machine": str(fake.random_int(min=1000000000000000, max=9999999999999999))
     }
 
-
     # Step 1: Convert the dictionary to a JSON string
     json_data = json.dumps(data_dict)
 
@@ -38,12 +36,13 @@ def generate_data():
     # Step 3: Base64-encode the URL-encoded string
     base64_encoded_data = base64.b64encode(url_encoded_data.encode()).decode()
 
-
     # Call the function to send the POST request
     post_request(base64_encoded_data)
 
 
 def post_request(encoded_data):
+    global I  # Declare the global variable to modify it inside the function
+
     headers = {
         "Host": "lerih3.cc",
         "Cookie": "think_lang=en-us; PHPSESSID=e5b98f7fff3342a73525130bb2d2b10d",
@@ -66,22 +65,20 @@ def post_request(encoded_data):
     payload = f"data={encoded_data}"
     try:
         response = requests.post(URL, headers=headers, data=payload)
-        response=json.loads(response.text)
-        print(f"Response Code : {response['code']},Response Message : {response['msg']}")
-        if response['code'] == 1:
-            I=+1
+        response = json.loads(response.text)
+        print(f"Response Code: {response['code']}, Response Message: {response['msg']}")
+
+        if response['code'] == 1:  # Assuming 1 indicates a successful registration
+            I += 1
+
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")
-
 
 def main():
     generate_data()
 
-
-
 if __name__ == "__main__":
-    # loop infite
+    # Run an infinite loop to continuously send requests
     while True:
         main()
-        print(f"Account Count : {i}")
-
+        print(f"Account Count: {I}")
