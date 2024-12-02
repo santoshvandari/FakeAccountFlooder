@@ -1,7 +1,3 @@
-Here's a detailed `README.md` file for your project:
-
----
-
 # Fake Account Generator for Scammer Website  
 
 This Python script is designed to generate and register **fake accounts** on a scammer website that falsely claims to offer work opportunities in exchange for money. The goal of this script is to overwhelm the scammer's database by generating a large number of fake accounts, eventually leading to a system crash or making their database unusable.
@@ -10,42 +6,7 @@ This Python script is designed to generate and register **fake accounts** on a s
 
 ## ⚠️ Disclaimer  
 
-This script is provided for **educational purposes only**. Using this script to disrupt, damage, or compromise any system without the explicit permission of the system owner is **illegal** and could result in legal consequences. The author of this script does not condone malicious activities and is not responsible for any misuse of this code. Use it responsibly and ethically!
-
----
-
-## 🚀 Features  
-
-- Automatically generates fake accounts with random usernames, mobile numbers, passwords, and device information.  
-- Encodes the data using **URL encoding** and **Base64** encoding before sending it as a POST request to the target website.  
-- Bypasses simple security mechanisms by emulating a genuine request using carefully crafted HTTP headers.  
-- Continuously sends requests to flood the server.
-
----
-
-## 🛠️ Prerequisites  
-
-Make sure you have the following installed on your system:  
-
-- Python 3.x  
-- `requests` library  
-- `Faker` library  
-
-You can install the required libraries using the following command:
-
-```bash
-pip install requests faker
-```
-
----
-
-## 📂 Project Structure  
-
-```
-|-- fake_account_generator/
-    |-- main.py               # Main script that runs the program
-    |-- README.md             # Project documentation (this file)
-```
+This script is provided for **educational purposes only**. Using this script to disrupt, damage, or compromise any system without the explicit permission of the system owner is **illegal** and could result in legal consequences. The author of this script does not support malicious activities and is not responsible for any misuse of this code. Use it responsibly and ethically!
 
 ---
 
@@ -69,10 +30,26 @@ headers = {
 ## 🚀 Usage  
 
 To run the script and start generating fake accounts, simply execute the script using the following command:
+- Create the Virtual Environment (Not Necessary but Recommand) and activate it.
+    ```bash
+        # For Windows User
+        python -m venv venv
+        venv\Scripts\activate
 
-```bash
-python main.py
-```
+        #For Linux User
+        python3 -m virtualenv venv
+        source venv/bin/activate
+
+    ```
+- Install the Requirements
+    ```bash
+        pip install -r requirements.txt
+    ```
+- Run the `main.py` file
+
+    ```bash
+    python main.py
+    ```
 
 The script will continuously generate random fake accounts and send them to the target website.
 
@@ -81,7 +58,7 @@ The script will continuously generate random fake accounts and send them to the 
 ## 💡 How It Works  
 
 1. **Random Data Generation**:  
-   The script uses the `Faker` library to generate random user data, including usernames, mobile numbers, passwords, and machine IDs.
+   The script uses the `Faker` library as well as custom function to generate random user data, including usernames, mobile numbers, passwords, and machine IDs.
 
 2. **Data Encoding**:  
    The generated data is first converted to a JSON string, URL-encoded, and then Base64-encoded to match the server's expected format.
@@ -97,9 +74,16 @@ The script will continuously generate random fake accounts and send them to the 
 ## 🧩 Example Output  
 
 ```bash
-Response Code: 200, Response Message: Registration successful.
-Response Code: 500, Response Message: Internal Server Error.
-Response Code: 400, Response Message: Invalid Data Format.
+Account Count: 1
+Response Code: 1, Response Message: Registration success
+Account Count: 2
+Response Code: 2, Response Message: Missing Invatation Code
+Account Count: 3
+Response Code: 1, Response Message: Registration success
+Account Count: 4
+Response Code: 2, Response Message: Internal Server Error.
+Account Count: 5
+Response Code: 1, Response Message: Registration success
 ```
 
 ---
