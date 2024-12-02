@@ -110,6 +110,21 @@ Using this script to target websites without proper authorization is illegal and
 
 ---
 
-## 📞 Contact  
+## 💬 **Contributing**  
 
-If you have any questions or need support regarding this script, feel free to reach out.
+We welcome contributions! Feel free to submit a pull request or open an issue if you encounter bugs or have ideas for new features.
+
+---
+
+## 📜 **License**  
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📧 **Contact**  
+
+For inquiries or support, feel free to reach out:  
+- **GitHub**: [@santoshvandari](https://github.com/santoshvandari)  
+
+---
