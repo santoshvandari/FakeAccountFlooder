@@ -1,0 +1,27 @@
+POST /api/user/register HTTP/2
+Host: lerih3.cc
+Cookie: think_lang=en-us; PHPSESSID=e5b98f7fff3342a73525130bb2d2b10d
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: https://lerih3.cc/
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Token: 
+Access-Control-Allow-Origin: *
+Content-Length: 229
+Origin: https://lerih3.cc
+Dnt: 1
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Sec-Gpc: 1
+Te: trailers
+
+data=JTdCJTIydXNlcm5hbWUlMjI6JTIyOTgyNDAwMDAwMTIlMjIsJTIybW9iaWxlJTIyOiUyMjk4MjQwMDAwMDEyJTIyLCUyMnBhc3N3b3JkJTIyOiUyMjEyMzQ1Njc4OSUyMiwlMjJpbnZpdGVyJTIyOiUyMjMxNDgwNSUyMiwlMjJtYWNoaW5lJTIyOiUyMjE3MzMxNDgyNjIwNTU4MzI0ODA2JTIyJTdE
+
+
+
+
+
+data = {"username":"98240000012","mobile":"98240000012","password":"123456789","inviter":"314805","machine":"17331482620558324806"}
